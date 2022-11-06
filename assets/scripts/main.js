@@ -1,5 +1,6 @@
 // main.js
 
+
 // Run the init() function when the page has loaded
 window.addEventListener('DOMContentLoaded', init);
 
@@ -24,6 +25,8 @@ function getRecipesFromStorage() {
   // A9. TODO - Complete the functionality as described in this function
   //           header. It is possible in only a single line, but should
   //           be no more than a few lines.
+  const d = (JSON.parse(window.localStorage.getItem('recipes')));
+  return d;
 }
 
 /**
@@ -35,10 +38,19 @@ function getRecipesFromStorage() {
  */
 function addRecipesToDocument(recipes) {
   // A10. TODO - Get a reference to the <main> element
+  var mainElem = document.querySelector('main');
   // A11. TODO - Loop through each of the recipes in the passed in array,
   //            create a <recipe-card> element for each one, and populate
   //            each <recipe-card> with that recipe data using element.data = ...
   //            Append each element to <main>
+  console.log(typeof(recipes));
+  for (const r of recipes){
+    
+    let newRecipe = document.createElement('recipe-card');
+    newRecipe.data = r;
+    mainElem.append(newRecipe);
+  }
+
 }
 
 /**
