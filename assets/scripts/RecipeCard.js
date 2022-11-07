@@ -127,20 +127,20 @@ class RecipeCard extends HTMLElement {
     //           cardTemplate.html and the data passed in (You should only have one <article>,
     //           do not nest an <article> inside another <article>). You should use Template
     //           literals (tempalte strings) and element.innerHTML for this.
-    articleCall.innerHTML = `<img src= ${data.imgSrc}
-    alt=${data.titleTxt}>
-  <p class=${data.titleTxt}>
-    <a href=${data.titleLnk}>Title</a>
+    articleCall.innerHTML = `<img src=${data.imgSrc}
+    alt="Recipe Title">
+  <p class="title">
+    <a href=${data.titleLnk}>${data.titleTxt}</a>
   </p>
-  <p class=${data.organization}>The Chef's Organization</p>
-  <div class=${data.rating}>
+  <p class="organization">${data.organization}</p>
+  <div class="rating">
     <span>${data.rating}</span>
-    <img src=${data.imgAlt} alt="5 stars">
-    <span>(500)</span>
+    <img src="/assets/images/icons/${data.rating}-star.svg" alt="5 stars">
+    <span>${data.numRatings}</span>
   </div>
-  <time>5${data.lengthTime}</time>
-  <p class=${data.ingredients}>
-  ${data.ingredients}
+  <time>${data.lengthTime}</time>
+  <p class="ingredients">
+    ${data.ingredients}
   </p>`;
 
   }
