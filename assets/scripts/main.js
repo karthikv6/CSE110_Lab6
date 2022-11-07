@@ -61,7 +61,7 @@ function getRecipesFromStorage() {
   //   }
   // ]
   var request = new XMLHttpRequest();
-  request.open("GET","../../reference/recipes.json", false);
+  request.open("GET","../reference/recipes.json", false);
   request.send(null);
   var d = JSON.parse(request.responseText);
   console.log(d);
