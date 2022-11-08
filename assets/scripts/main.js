@@ -164,7 +164,7 @@ function initFormHandler() {
     window.localStorage.clear();
 
     var mainElem = document.querySelector('main');
-    mainElem = '';
+    mainElem.innerHTML = '';
   }
 
 }
