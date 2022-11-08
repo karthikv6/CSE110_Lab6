@@ -160,9 +160,11 @@ function initFormHandler() {
   // Steps B12 & B13 will occur inside the event listener from step B11
   // B12. TODO - Clear the local storage
   // B13. TODO - Delete the contents of <main>
-  function submitFunc(){
-    tempFormData = Object.create(formElem);
-    
+  function clearLocal(){
+    window.localStorage.clear();
+
+    var mainElem = document.querySelector('main');
+    mainElem = '';
   }
 
 }
